@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for modules/users/useCases/authenticateUser/AuthenticateUserUseCase.ts</title>
+    <title>Code coverage report for modules/statements/repositories/in-memory/InMemoryStatementsRepository.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../../prettify.css" />
     <link rel="stylesheet" href="../../../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">modules/users/useCases/authenticateUser</a> AuthenticateUserUseCase.ts</h1>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">modules/statements/repositories/in-memory</a> InMemoryStatementsRepository.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">96.22% </span>
+                <span class="strong">45.09% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>51/53</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">83.33% </span>
-                <span class="quiet">Branches</span>
-                <span class='fraction'>5/6</span>
+                <span class='fraction'>23/51</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
-                <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">96.22% </span>
+                <span class="strong">50% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>2/4</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">45.09% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>51/53</span>
+                <span class='fraction'>23/51</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -114,9 +114,7 @@
 <a name='L49'></a><a href='#L49'>49</a>
 <a name='L50'></a><a href='#L50'>50</a>
 <a name='L51'></a><a href='#L51'>51</a>
-<a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a>
-<a name='L54'></a><a href='#L54'>54</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L52'></a><a href='#L52'>52</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -134,93 +132,89 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { inject, injectable } from "tsyringe";
-import { compare } from 'bcryptjs';
-import { sign } from 'jsonwebtoken';
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Statement } from "../../entities/Statement";
+import { ICreateStatementDTO } from "../../useCases/createStatement/ICreateStatementDTO";
+import { IGetBalanceDTO } from "../../useCases/getBalance/IGetBalanceDTO";
+import { IGetStatementOperationDTO } from "../../useCases/getStatementOperation/IGetStatementOperationDTO";
+import { IStatementsRepository } from "../IStatementsRepository";
 &nbsp;
-import authConfig from '../../../../config/auth';
+export class InMemoryStatementsRepository implements IStatementsRepository {
+  private statements: Statement[] = [];
 &nbsp;
-import { IUsersRepository } from "../../repositories/IUsersRepository";
-import { IAuthenticateUserResponseDTO } from "./IAuthenticateUserResponseDTO";
-import { IncorrectEmailOrPasswordError } from "./IncorrectEmailOrPasswordError";
+  async create(data: ICreateStatementDTO): Promise&lt;Statement&gt; {
+    const statement = new Statement();
 &nbsp;
-interface IRequest {
-  email: string;
-  password: string;
-}
+    Object.assign(statement, data);
 &nbsp;
-@injectable()
-export class AuthenticateUserUseCase {
-  constructor(
-    @inject('UsersRepository')
-    private usersRepository: IUsersRepository,
-  ) { }
+    this.statements.push(statement);
 &nbsp;
-  async execute({ email, password }: IRequest): Promise&lt;IAuthenticateUserResponseDTO&gt; {
-    const user = await this.usersRepository.findByEmail(email);
-&nbsp;
-    if (!user) {
-      throw new IncorrectEmailOrPasswordError();
-    }
-&nbsp;
-    const passwordMatch = await compare(password, user.password);
-&nbsp;
-    if (!passwordMatch) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
-<span class="cstat-no" title="statement not covered" >      throw new IncorrectEmailOrPasswordError();</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
-&nbsp;
-    const { secret, expiresIn } = authConfig.jwt;
-    // secret: process.env.JWT_SECRET as string,
-&nbsp;
-    const token = sign({ user }, secret, {
-      subject: user.id,
-      expiresIn,
-    });
-&nbsp;
-    return {
-      user: {
-        id: user.id,
-        name: user.name,
-        email: user.email
-      },
-      token
-    }
+    return statement;
   }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  async findStatementOperation({ statement_id, user_id }: IGetStatementOperationDTO): Promise&lt;Statement | undefined&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    return this.statements.find(operation =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >      operation.id === statement_id &amp;&amp;</span>
+<span class="cstat-no" title="statement not covered" >      operation.user_id === user_id</span>
+<span class="cstat-no" title="statement not covered" >    ));</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >  async getUserBalance({ user_id, with_statement = false }: IGetBalanceDTO):</span>
+<span class="cstat-no" title="statement not covered" >    Promise&lt;</span>
+<span class="cstat-no" title="statement not covered" >      { balance: number } | { balance: number, statement: Statement[] }</span>
+<span class="cstat-no" title="statement not covered" >    &gt;</span>
+<span class="cstat-no" title="statement not covered" >  {</span>
+<span class="cstat-no" title="statement not covered" >    const statement = this.statements.filter(operation =&gt; operation.user_id === user_id);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    const balance = statement.reduce((acc, operation) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      if (operation.type === 'deposit') {</span>
+<span class="cstat-no" title="statement not covered" >        return acc + operation.amount;</span>
+<span class="cstat-no" title="statement not covered" >      } else {</span>
+<span class="cstat-no" title="statement not covered" >        return acc - operation.amount;</span>
+<span class="cstat-no" title="statement not covered" >      }</span>
+<span class="cstat-no" title="statement not covered" >    }, 0)</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (with_statement) {</span>
+<span class="cstat-no" title="statement not covered" >      return {</span>
+<span class="cstat-no" title="statement not covered" >        statement,</span>
+<span class="cstat-no" title="statement not covered" >        balance</span>
+<span class="cstat-no" title="statement not covered" >      }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    return { balance }</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
 }
 &nbsp;</pre></td></tr></table></pre>
 
